@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Online Pharmacy</title>
+
+  <title>Pharmacy</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color: #96d1ed;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">Online Pharmacy
+<br><br>Online Pharmacy and Locator is developed to automate the existing system of manually 
+maintained records of the patients, medicines, doctors, pharmacies, etc. This application can be 
+used by any user to find the nearby pharmacies and also automate the process of manual
+purchasing medicines and seeking doctor’s consultation. The main aim of developing this 
+application is to supply the medicines all over the places by ordering through online and time 
+consumption. As per the prescription, the user can search medicines and find the pharmacies 
+which are preferable to user. 
+This application also helps in getting consultation from doctor through Online, without 
+visiting doctor’s place. This application provides user login to the customer and admin can get 
+the expired medicine details and admin can able to see all the order datas of clients </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  {% include "ecom/footer.html" %}
+</body>
+
+
+</html>
